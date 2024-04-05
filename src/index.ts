@@ -16,7 +16,7 @@ class Test {
 
   private async _work() {
     const hourAgo = moment.utc().subtract(1, "hour");
-    const block = await this.ethDater.getDate(hourAgo.toDate());
+    const block = await this.ethDater.getDate(hourAgo.toDate(), false, true);
     logger.info("Test", "blockNumber:", block);
   }
 
